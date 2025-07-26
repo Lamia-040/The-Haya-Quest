@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="dashboardContainer"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.UserDashboardController"
+            prefWidth="900" prefHeight="600">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="20" style="-fx-background-color: #d3bce3;" prefWidth="200">
+            <padding>
+                <Insets top="40" left="20" right="20" bottom="40"/>
+            </padding>
+
+            <Label text="📖 The Haya Quest" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+            <Button fx:id="dashboardBtn"
+                    text="Dashboard"
+                    prefWidth="160"
+                    onAction="#goToDashboard"/>
+
+            <Button fx:id="browseBtn"
+                    text="Browse Hadith"
+                    prefWidth="160"
+                    onAction="#goToBrowseHadith"/>
+
+            <Button fx:id="logoutButton"
+                    text="Logout"
+                    prefWidth="160"
+                    onAction="#handleLogout"
+                    style="-fx-background-color: #e57373; -fx-text-fill: white;" />
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <StackPane fx:id="contentArea">
+            <VBox alignment="CENTER" spacing="15">
+                <padding>
+                    <Insets top="40" left="40" right="40" bottom="40"/>
+                </padding>
+
+                <Label text="Assalamu Alaikum."
+                       style="-fx-font-size: 26px; -fx-text-fill: #630646; -fx-font-weight: bold;" />
+
+                <Label text="Welcome to The Haya Quest!"
+                       style="-fx-font-size: 22px; -fx-text-fill: #4a235a;" />
+
+                <Label text="Your journey toward learning Islamic Etiquette and"
+                       style="-fx-font-size: 18px; -fx-text-fill: #4a235a;" />
+
+                <Label text="beautiful Manners starts here."
+                       style="-fx-font-size: 18px; -fx-text-fill: #4a235a;" />
+            </VBox>
+        </StackPane>
+    </center>
+</BorderPane>

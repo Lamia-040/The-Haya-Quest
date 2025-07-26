@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.HadithViewController"
+      spacing="10" padding="20">
+
+    <Label fx:id="hadithTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <TextArea fx:id="hadithContent" wrapText="true" editable="false" prefHeight="400"/>
+
+    <Button text="Start Quiz" fx:id="startQuizBtn" onAction="#startQuiz"/>
+</VBox>

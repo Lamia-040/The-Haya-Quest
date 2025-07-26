@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AddHadithController"
+            fitToWidth="true">
+
+    <content>
+        <VBox spacing="20">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Label text="➕ Add New Hadith" style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+            <!-- Hadith Title -->
+            <VBox spacing="5">
+                <Label text="Hadith Title:"/>
+                <TextField fx:id="titleField" promptText="Enter hadith title"/>
+            </VBox>
+
+            <!-- Hadith Content -->
+            <VBox spacing="5">
+                <Label text="Hadith Content:"/>
+                <TextArea fx:id="contentArea" promptText="Enter full hadith content" prefRowCount="5"/>
+            </VBox>
+
+            <!-- Quiz Questions -->
+            <VBox spacing="20">
+                <Label text="📝 Add 3 Quiz Questions" style="-fx-font-weight: bold;"/>
+
+                <!-- Quiz 1 -->
+                <VBox spacing="8" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                    <Label text="Question 1"/>
+                    <TextField fx:id="q1Field" promptText="Enter question text"/>
+                    <TextField fx:id="q1Option1" promptText="Option 1"/>
+                    <TextField fx:id="q1Option2" promptText="Option 2"/>
+                    <TextField fx:id="q1Option3" promptText="Option 3"/>
+                    <ComboBox fx:id="q1Correct" promptText="Correct Option"/>
+                </VBox>
+
+                <!-- Quiz 2 -->
+                <VBox spacing="8" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                    <Label text="Question 2"/>
+                    <TextField fx:id="q2Field" promptText="Enter question text"/>
+                    <TextField fx:id="q2Option1" promptText="Option 1"/>
+                    <TextField fx:id="q2Option2" promptText="Option 2"/>
+                    <TextField fx:id="q2Option3" promptText="Option 3"/>
+                    <ComboBox fx:id="q2Correct" promptText="Correct Option"/>
+                </VBox>
+
+                <!-- Quiz 3 -->
+                <VBox spacing="8" style="-fx-border-color: lightgray; -fx-border-width: 1; -fx-padding: 10;">
+                    <Label text="Question 3"/>
+                    <TextField fx:id="q3Field" promptText="Enter question text"/>
+                    <TextField fx:id="q3Option1" promptText="Option 1"/>
+                    <TextField fx:id="q3Option2" promptText="Option 2"/>
+                    <TextField fx:id="q3Option3" promptText="Option 3"/>
+                    <ComboBox fx:id="q3Correct" promptText="Correct Option"/>
+                </VBox>
+            </VBox>
+
+            <!-- Submit Button -->
+            <Button text="Save Hadith and Quiz" onAction="#handleSave" style="-fx-background-color: #27ae60; -fx-text-fill: white;"/>
+
+            <!-- Status Message -->
+            <Label fx:id="statusLabel" textFill="red"/>
+        </VBox>
+    </content>
+</ScrollPane>

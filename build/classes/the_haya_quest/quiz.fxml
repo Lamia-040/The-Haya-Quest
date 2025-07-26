@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.QuizController"
+            fitToWidth="true">
+
+    <VBox fx:id="quizContainer" spacing="20">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <Label fx:id="quizTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+        <!-- Question 1 -->
+        <VBox spacing="10">
+            <Label fx:id="question1Label"/>
+            <RadioButton fx:id="q1Option1"/>
+            <RadioButton fx:id="q1Option2"/>
+            <RadioButton fx:id="q1Option3"/>
+        </VBox>
+
+        <!-- Question 2 -->
+        <VBox spacing="10">
+            <Label fx:id="question2Label"/>
+            <RadioButton fx:id="q2Option1"/>
+            <RadioButton fx:id="q2Option2"/>
+            <RadioButton fx:id="q2Option3"/>
+        </VBox>
+
+        <!-- Question 3 -->
+        <VBox spacing="10">
+            <Label fx:id="question3Label"/>
+            <RadioButton fx:id="q3Option1"/>
+            <RadioButton fx:id="q3Option2"/>
+            <RadioButton fx:id="q3Option3"/>
+        </VBox>
+
+        <Button text="Submit Quiz" onAction="#submitQuiz"/>
+    </VBox>
+</ScrollPane>

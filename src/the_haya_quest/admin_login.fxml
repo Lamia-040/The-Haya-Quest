@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400" prefWidth="600" style="-fx-background-color: #DCD6F7;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoginController">
+
+    <!-- Back to User Login Button -->
+    <Button layoutX="300.0" layoutY="289.0" onAction="#goToUserLogin" style="-fx-font-size: 13px; -fx-background-color: #E0CFF2;" text="← Back to User Login" />
+
+    <!-- Logo or Image -->
+    <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="240.0" layoutY="30.0" preserveRatio="true">
+        <image>
+            <Image url="@../image/Logo.png" />
+        </image>
+    </ImageView>
+
+    <!-- Page Title -->
+    <Label layoutX="210.0" layoutY="160.0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #4B0082;" text="Admin Login" />
+
+    <!-- Username -->
+    <Label layoutX="130.0" layoutY="210.0" text="Username" />
+    <TextField fx:id="usernameField" layoutX="230.0" layoutY="205.0" prefWidth="220" />
+
+    <!-- Password -->
+    <Label layoutX="130.0" layoutY="250.0" text="Password" />
+    <PasswordField fx:id="passwordField" layoutX="230.0" layoutY="245.0" prefWidth="220" />
+
+    <!-- Login Button -->
+    <Button layoutX="240.0" layoutY="290.0" onAction="#handleLogin" style="-fx-background-color: #957DAD; -fx-text-fill: white;" text="Login" />
+
+    <!-- Status Message -->
+    <Label fx:id="statusLabel" layoutX="200.0" layoutY="330.0" textFill="red" />
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AdminDashboardController"
+            prefWidth="900" prefHeight="600">
+
+    <!-- Sidebar -->
+    <left>
+        <VBox spacing="20" style="-fx-background-color: #d3bce3;" prefWidth="200">
+            <padding><Insets top="40" left="20" right="20" bottom="40"/></padding>
+            <Label text="🛡 The Haya Admin" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <Button text="Dashboard" fx:id="dashboardBtn" prefWidth="160" onAction="#goToDashboard"/>
+            <Button text="Manage Hadith" fx:id="manageBtn" prefWidth="160" onAction="#goToManageHadith"/>
+            <Button text="Add Hadith" fx:id="addBtn" prefWidth="160" onAction="#goToAddHadith"/>
+            <Button text="Logout" fx:id="logoutBtn" prefWidth="160" onAction="#logout"/>
+        </VBox>
+    </left>
+
+    <!-- Main Panel Area -->
+    <center>
+        <StackPane fx:id="adminContentArea"/>
+    </center>
+</BorderPane>

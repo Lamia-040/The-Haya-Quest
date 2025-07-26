@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.ResultController"
+      spacing="15" padding="20">
+
+    <Label fx:id="resultTitle" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Label fx:id="scoreLabel" style="-fx-font-size: 16px;"/>
+
+    <VBox spacing="10">
+        <Label fx:id="q1Result"/>
+        <Label fx:id="q2Result"/>
+        <Label fx:id="q3Result"/>
+    </VBox>
+
+    <Button text="🔙 Back to Hadith List" onAction="#backToList"/>
+</VBox>
